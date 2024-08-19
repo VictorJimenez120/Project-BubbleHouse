@@ -79,8 +79,8 @@ WSGI_APPLICATION = 'bubblehouseapi.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'USER': 'Admin',
-        'NAME': 'DBBubbleHouse',
+        'USER': 'admin_bubblehouse',
+        'NAME': 'db_bubblehouse',
         'PASSWORD': 'admin123',
         'HOST': 'localhost',
         'PORT': '5432'
