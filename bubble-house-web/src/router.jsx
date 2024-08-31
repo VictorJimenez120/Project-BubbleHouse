@@ -10,11 +10,11 @@ export default function Router() {
         <BrowserRouter>
             <Routes>
                 <Route element={<AppLayout />}>
-                    <Route path="/" element={<DashboardView />} index />
+                    <Route path="/home" element={<DashboardView />} />
                 </Route>
 
                 <Route element={<AuthLayout />}>
-                    <Route path="/auth/login" element={<LoginView />} />
+                    <Route path="/" element={<LoginView />} index />
                     <Route path="/auth/register" element={<RegisterView />} />
                 </Route>
             </Routes>
