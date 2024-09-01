@@ -1,14 +1,14 @@
 import React from 'react'
 import NavBarPrincipal from '../../layouts/NavBarPrincipal'
 
-export default function IngredientView() {
+export default function UsersView() {
   return (
     <>
       <NavBarPrincipal
-        title={"Ingredientes"}
+        title={"Usuarios"}
       />
       <div>
-        Ingredientes
+        Usuarios
       </div>
     </>
   )

@@ -4,33 +4,30 @@ import { BsCartPlusFill, BsBoxArrowRight } from 'react-icons/bs';
 import Tooltip from '@mui/material/Tooltip';
 import { Link } from 'react-router-dom';
 
-export default function NavBarSecondary() {
-  const [selectedIcon, setSelectedIcon] = useState(null);
+export default function NavBarSecondary({title}) {
+  const [selectedIcon, ] = useState(title);
 
-  const handleIconClick = (iconName) => {
-    setSelectedIcon(iconName);
-  };
 
   const icons = [
-    { Component: ImBook, title: "Menú" },
-    { Component: ImMug, title: "Crear Bubble" },
-    { Component: BsCartPlusFill, title: "Carrito" },
-    { Component: BsBoxArrowRight, title: "Iniciar Sesión" },
+    { Component: ImBook, title: "Menú", path:"/menu" },
+    { Component: ImMug, title: "Crear Bubble", path:"/bubble"  },
+    { Component: BsCartPlusFill, title: "Carrito", path:"/car"  },
+    { Component: BsBoxArrowRight, title: "Iniciar Sesión", path:"/"  },
   ];
 
   return (
     <div className="flex justify-center items-center overflow-x-auto bg-white p-2 w-full space-x-4 md:space-x-8">
       <div className="flex justify-center items-center space-x-4 md:space-x-8">
-        {icons.map(({ Component, title }, index) => (
+        {icons.map(({ Component, title, path }, index) => (
           <div
             key={index}
             className="flex-shrink-0 flex justify-center items-center rounded-lg p-2 md:p-4 hover:bg-gray-300 cursor-pointer transition-colors duration-200"
-            onClick={() => handleIconClick(title)}
+            //onClick={() => handleIconClick()}
           >
             <Tooltip title={title}>
-              <Link>
+              <Link to={path}>
                 <Component
-                  className={`text-gray-800 ${selectedIcon === title ? 'text-purple-600' : ''} text-2xl md:text-4xl`}
+                  className={`text-gray-800 ${selectedIcon === title ? 'text-blue-400' : ''} text-2xl md:text-4xl`}
                 />
               </Link>
             </Tooltip>

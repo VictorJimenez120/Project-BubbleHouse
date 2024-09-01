@@ -1,7 +1,15 @@
 import React from 'react'
+import NavBarPrincipal from '../../layouts/NavBarPrincipal'
 
 export default function RecipeView() {
   return (
-    <div>RecipeView</div>
+    <>
+      <NavBarPrincipal
+        title={"Recetas"}
+      />
+      <div>
+        Recetas
+      </div>
+    </>
   )
 }

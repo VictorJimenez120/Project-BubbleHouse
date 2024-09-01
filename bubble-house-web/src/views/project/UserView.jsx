@@ -1,7 +1,15 @@
 import React from 'react'
+import NavBarPrincipal from '../../layouts/NavBarPrincipal'
 
 export default function UserView() {
   return (
-    <div>UserView</div>
+    <>
+      <NavBarPrincipal
+        title={"Usuario"}
+      />
+      <div>
+        Usuario
+      </div>
+    </>
   )
 }
