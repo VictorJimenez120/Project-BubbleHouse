@@ -4,6 +4,7 @@ import DashboardView from "./views/DashboardView";
 import AuthLayout from "./layouts/AuthLayout";
 import LoginView from "./views/auth/LoginView";
 import RegisterView from "./views/auth/RegisterView";
+import DashboardSecondView from "./views/DashboardSecondView";
 
 export default function Router() {
     return (
@@ -11,6 +12,7 @@ export default function Router() {
             <Routes>
                 <Route element={<AppLayout />}>
                     <Route path="/home" element={<DashboardView />} />
+                    <Route path="/home-secondary" element={<DashboardSecondView />} />
                 </Route>
 
                 <Route element={<AuthLayout />}>
