@@ -22,12 +22,11 @@ export default function NavBarSecondary({title}) {
           <div
             key={index}
             className="flex-shrink-0 flex justify-center items-center rounded-lg p-2 md:p-4 hover:bg-gray-300 cursor-pointer transition-colors duration-200"
-            //onClick={() => handleIconClick()}
           >
             <Tooltip title={title}>
               <Link to={path}>
                 <Component
-                  className={`text-gray-800 ${selectedIcon === title ? 'text-blue-400' : ''} text-2xl md:text-4xl`}
+                  className={`text-gray-800 ${selectedIcon === title ? 'text-blue-500' : ''} text-2xl md:text-4xl`}
                 />
               </Link>
             </Tooltip>

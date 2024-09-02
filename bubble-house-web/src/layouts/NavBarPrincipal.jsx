@@ -35,7 +35,7 @@ export default function NavBarPrincipal({ title }) {
             <Tooltip title={title}>
               <Link to={path}>
                 <Component
-                  className={`text-gray-800 ${selectedIcon === title ? 'text-blue-400' : ''} text-2xl md:text-4xl`}
+                  className={`text-gray-800 ${selectedIcon === title ? 'text-blue-500' : ''} text-2xl md:text-4xl`}
                 />
               </Link>
             </Tooltip>
